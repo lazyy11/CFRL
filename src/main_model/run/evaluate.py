@@ -10,8 +10,8 @@ def read_values(file_path):
 
 
 if __name__ == "__main__":
-    truths_file_path = '/home/eutaboo/PycharmProjects/PromptCast/LMP/Thailand/Dataset_test/TH_5_steps/TH_S/'
-    predictions_file_path = '/home/eutaboo/PycharmProjects/PromptCast/LMP/Thailand/T5_pred_results/TH/TH_5_steps'
+    truths_file_path = './Dataset_test/TH_5_steps/TH_S/'
+    predictions_file_path = './T5_pred_results/TH/TH_5_steps'
 
     truths_dirs = set(os.listdir(truths_file_path))
     predictions_dirs = set(os.listdir(predictions_file_path))
@@ -41,7 +41,7 @@ if __name__ == "__main__":
         # print(f"MSPE: {mspe}%\n")
         print(f"missing_rate: {missing_rate}%\n")
 
-        results_dir = f'/home/eutaboo/PycharmProjects/PromptCast/LMP/Thailand/evalution_results/TH/5_steps/{dir_name}/'
+        results_dir = f'./evalution_results/TH/5_steps/{dir_name}/'
         os.makedirs(results_dir, exist_ok=True)
 
         results_file_path = os.path.join(results_dir, 'evaluation.txt')
@@ -67,7 +67,7 @@ if __name__ == "__main__":
 
     results_data = sorted(results_data, key=lambda x: x['Variable'])
 
-    csv_file_path = '/home/eutaboo/PycharmProjects/PromptCast/LMP/Thailand/evalution_results/TH/5_steps/summary_results.csv'
+    csv_file_path = './evalution_results/TH/5_steps/summary_results.csv'
     with open(csv_file_path, 'w', newline='') as csvfile:
         fieldnames = ['Variable', 'MAE', 'RMSE', 'SMAPE', 'R^2', 'Missing Rate (%)']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
