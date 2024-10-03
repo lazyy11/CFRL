@@ -1,5 +1,5 @@
 import numpy as np
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.metrics import r2_score
 import re
 
 def np_evaluate(gt_output, pred_output):
