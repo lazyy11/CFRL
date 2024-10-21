@@ -1,7 +1,3 @@
-"""
-将slice_ecl.py转换后的csv转换成模型可以理解的prompt形式，格式为txt，完成后再用prepare_hf.py转换成json格式用于run_fh.py进行训练
-"""
-
 import pandas as pd
 import numpy as np
 import os
