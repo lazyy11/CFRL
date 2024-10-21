@@ -1,8 +1,3 @@
-"""
-Script for fine-tuning sequence-to-sequence models using the Transformers library.
-This script can be adapted for custom sequence-to-sequence tasks. Relevant guidance is included as comments.
-"""
-
 import os
 import sys
 import logging
